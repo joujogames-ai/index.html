@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معرض الصور الاحترافي</title>
+    <style>
+        /*
+        ********************************
+        قسم تنسيق CSS
+        ********************************
+        */
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4; /* خلفية رمادية فاتحة للموقع */
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #007bff; /* خط أزرق تحت العنوان */
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .gallery-container {
+            display: grid;
+            /* تصميم شبكي يعرض 3 صور في كل صف */
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px; /* المسافة بين الصور */
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .image-card {
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ظل خفيف للبطاقة */
+            overflow: hidden;
+            border-radius: 8px; /* حواف دائرية */
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .image-card:hover {
+            transform: translateY(-5px); /* رفع البطاقة قليلاً عند المرور عليها */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .image-card img {
+            width: 100%;
+            height: 250px; /* ارتفاع ثابت لجميع الصور */
+            object-fit: cover; /* لضمان ملء الصورة للارتفاع دون تشويه */
+            display: block;
+        }
+
+        .image-caption {
+            padding: 15px;
+            color: #555;
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>أعمالنا الاحترافية</h1>
+    <p>مجموعة مختارة من أفضل الصور الملتقطة</p>
+
+    <div class="gallery-container">
+        
+        <div class="image-card">
+            <img src="photo-1.jpg" alt="صورة للمدينة ليلاً">
+            <div class="image-caption">تصوير ليلي للمدينة</div>
+        </div>
+        
+        <div class="image-card">
+            <img src="photo-2.jpg" alt="صورة طعام احترافية">
+            <div class="image-caption">صورة طعام عالية الدقة</div>
+        </div>
+
+        <div class="image-card">
+            <img src="photo-3.jpg" alt="صورة طبيعة جبلية">
+            <div class="image-caption">مشهد طبيعي خلاب</div>
+        </div>
+
+        </div>
+</body>
+</html>
